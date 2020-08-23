@@ -14,7 +14,13 @@ mkdir -p ../data/samples
 
 #For single-end samples (Generic FASTQ Data)
 
-stacks process_radtags -1 ../data/clean/Pinero-Sept19_S59_L002_R1_001_clean.fastq.gz -2 ../data/clean/Pinero-Sept19_S59_L002_R2_001_clean.fastq.gz --inline_null -o ../data/samples -b ../meta/barcode_samples_plate1.txt -e apeKI -r -c -q
+stacks process_radtags -f ../data/clean/Pinero-Sept19_S59_L002_R1_001_clean.fastq.gz --inline_null -o ../data/samples -b ../../meta/barcode_samples_plate1.txt -e apeKI -r -c -q
+
+
+
+    process_radtags -f ./raw/rad_data.fq -o ./samples/ -b ./barcodes/barcodes -e sbfI -r -c -q
+
+
 
 #check output with FastQC
 
